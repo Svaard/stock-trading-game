@@ -9,15 +9,16 @@ class MessageHandler:
         self.add_command(Stocks(client))
         print(f'Loaded {len(self.commands)} built-in commands.')
 
+    def add_command(self, command):
+        if command.name not in self.commands:
+            self.commands[command.name] = command
+
     async def handler(self, message):
         if message.author.bot:
             return
-
         for name, com in self.commands.items():
             match = search(com.pattern, message.content, IGNORECASE)
             if match:
                 args = '' if not match.groups() else match.group(1)
-                if com.wait:
-                    return await com.command(message, args)
                 return com.command(message, args)
                 
