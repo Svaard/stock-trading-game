@@ -42,7 +42,6 @@ class Stocks(Command):
             return "Chillax, it's the weekend!"
         print(arg1)
         print(arg2)
-        # https://api.polygon.io/v2/aggs/ticker/AAPL/range/1/day/2022-02-25/2022-02-25?adjusted=true&sort=asc&limit=120&apiKey=e79WvUQ4367wwIKljj10pzLKRinEw_XB
         query: str = f'{HOST}{URL}{arg2}/range/1/day/{self.get_latest_day()}/{self.get_latest_day()}?adjusted=true&sort=asc&limit=120&apiKey={KEY}'
         response = requests.get(query)
         if response.status_code != 200:
