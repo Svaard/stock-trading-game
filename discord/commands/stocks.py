@@ -2,7 +2,7 @@ import requests
 from json import loads
 from commands.command import Command
 from re import search
-import config
+import config as config
 from datetime import datetime, timedelta
 
 HOST = 'https://api.polygon.io'

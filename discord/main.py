@@ -1,5 +1,5 @@
 import discord
-import config
+import config as config
 import re
 from message_handler import MessageHandler
 
