@@ -129,3 +129,4 @@ dmypy.json
 .pyre/
 
 /discord/config.py
+/flask/webapp/config.py
