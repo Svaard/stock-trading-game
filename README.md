@@ -1,4 +1,4 @@
-# OnNotice <img src="https://img.shields.io/github/last-commit/svaard/stock-trading-game?style=flat-square" />
+# Stock Trading Game <img src="https://img.shields.io/github/last-commit/svaard/stock-trading-game?style=flat-square" />
 To run bot in the background (from project root):
 <br>
   ‣ Unix based system - `$python discord/main.py &`<br>
