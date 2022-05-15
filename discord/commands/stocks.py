@@ -39,7 +39,7 @@ class Stocks(Command):
         arg1 = match.group(1)
         arg2 = match.group(2)
         if arg1 in ('buy','sell') and datetime.now().isoweekday() >= 6:
-            return "Chillax, it's the weekend!"
+            return "```Chillax, it's the weekend!```"
         print(arg1)
         print(arg2)
         query: str = f'{HOST}{URL}{arg2}/range/1/day/{self.get_latest_day()}/{self.get_latest_day()}?adjusted=true&sort=asc&limit=120&apiKey={KEY}'

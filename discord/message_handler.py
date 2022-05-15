@@ -1,5 +1,6 @@
 from re import search, IGNORECASE
 from commands.stocks import Stocks
+from commands.register import Register
 
 class MessageHandler:
 
@@ -7,6 +8,7 @@ class MessageHandler:
         self.client = client
         self.commands = {}
         self.add_command(Stocks(client))
+        self.add_command(Register(client))
         print(f'Loaded {len(self.commands)} built-in commands.')
 
     def add_command(self, command):

@@ -2,6 +2,7 @@ import discord
 import config
 import re
 from message_handler import MessageHandler
+from database import Database
 
 class MyClient(discord.Client):
 
